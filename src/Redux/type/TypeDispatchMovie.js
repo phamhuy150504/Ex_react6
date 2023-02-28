@@ -1,0 +1,1 @@
+export const CHANGE_CHOOSEN = 'CHANGE_CHOOSEN'
