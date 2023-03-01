@@ -1,19 +1,31 @@
 import dataMovie from '../../data/dataMovie.json'
-import { CHANGE_CHOOSEN } from '../type/TypeDispatchMovie'
+import { ADD_TICKETS, CHANGE_CHOOSEN, REMOVE_TICKET } from '../type/TypeDispatchMovie'
 
 
 const initState = {
     dataChairs: dataMovie,
     chairChosen: [
-        {soGhe: 'A1'}
+        
     ]
 }
 
 const MovieReducer = (state=initState, action) => {
     switch(action.type) {
-        case CHANGE_CHOOSEN: {
-            console.log(action.payload.soGhe);
-
+        case ADD_TICKETS : {
+            let cloneChairChosen = [...state.chairChosen]
+            let index = cloneChairChosen.findIndex(chair => chair.soGhe === action.payload.soGhe)
+            index !== -1 ? cloneChairChosen.splice(index, 1) : cloneChairChosen.push(action.payload)
+        
+            return {
+                ...state, chairChosen: cloneChairChosen
+            }
+        } case REMOVE_TICKET : {
+            let cloneChairChosen = [...state.chairChosen]
+            let index = cloneChairChosen.findIndex(chair => chair.soGhe === action.payload.soGhe)
+            index !== -1 && cloneChairChosen.splice(index, 1)
+            return {
+                ...state, chairChosen: cloneChairChosen
+            }
         }
         default: { 
             return {...state} 

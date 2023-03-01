@@ -9,7 +9,7 @@ class ListChair extends Component {
         return this.props.dataChairs.map((chair, index) => {
             return (
                 <div key={index} className='text-center'>
-                     <Chair index={index}  chair={chair}/>
+                     <Chair location={index}  chair={chair}/>
                 </div>
             )
         })
@@ -17,9 +17,9 @@ class ListChair extends Component {
 
   render() {
     return (
-        <Fragment>
+        <>
             {this.renderHangGhe()}
-        </Fragment>
+        </>
     )
   }
 }

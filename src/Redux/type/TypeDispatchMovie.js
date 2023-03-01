@@ -1,1 +1,3 @@
-export const CHANGE_CHOOSEN = 'CHANGE_CHOOSEN'
+export const REMOVE_TICKET = 'REMOVE_TICKET'
+
+export const ADD_TICKETS = 'ADD_TICKETS'

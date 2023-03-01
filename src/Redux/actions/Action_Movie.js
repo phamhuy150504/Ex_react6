@@ -1,8 +1,15 @@
-import { CHANGE_CHOOSEN } from "../type/TypeDispatchMovie"
+import {  ADD_TICKETS, REMOVE_TICKET } from "../type/TypeDispatchMovie"
 
-export const changeChoosen = payload => {
+export const removeTicket = payload => {
     return {
-        type: CHANGE_CHOOSEN, 
+        type: REMOVE_TICKET,
+        payload
+    }
+}
+
+export const addTickets = payload => {
+    return {
+        type: ADD_TICKETS,
         payload
     }
 }

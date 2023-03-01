@@ -1,28 +1,28 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 import InfoChoosenChair from './InfoChoosenChair';
 import ListChair from './ListChair';
 import './Movie.css'
 
 
-class Exercise_Moive extends Component {
+export default class Exercise_Moive extends Component {
 
   render() {
-    const style = {
-        position: 'fixed',
+    const styleMovie = {
+        position: 'relative',
         backgroundImage: "url('./img/Moive/bgmovie.jpg')",
         width: '100%',
-        height: '100%',
-        backgroundSize: 'cover'
+        height: '100vh',
+        backgroundSize: 'cover',
     };
     const wrapper = {
         backgroundColor: 'rgba(0,0,0,0.5)', 
         position: 'absolute', 
         width: '100%', 
-        height: '100%'
+        height: '100%',
     };
+    
     return (
-      <div style={style}>
+      <div style={styleMovie}>
         <div style={wrapper}>
             <div className='container'>
                 <div className="row">
@@ -46,10 +46,3 @@ class Exercise_Moive extends Component {
   }
 }
 
-const mapStateToProps = state => {
-    return {
-        dataChair: state.MovieReducer.dataChair
-    }
-}
-
-export default connect(mapStateToProps)(Exercise_Moive)

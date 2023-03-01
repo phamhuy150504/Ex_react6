@@ -13,7 +13,7 @@
 
 .rowNumber{
     /* font-size: 25px; */
-    width: 43px;
+    width: 40px;
     height: 35px;
     background: none;
     border:none;
@@ -46,7 +46,7 @@
     color: #000;
     cursor: no-drop !important;
     border-radius: 5px;
-    width: 45px;
+    width: 40px;
     height: 35px;
 
 }
@@ -57,6 +57,6 @@
     color: #000;
     cursor: pointer;
     border-radius: 5px;
-    width: 45px;
+    width: 40px;
     height: 35px;
 }
