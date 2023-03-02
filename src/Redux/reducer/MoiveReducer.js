@@ -1,5 +1,5 @@
 import dataMovie from '../../data/dataMovie.json'
-import { ADD_TICKETS, CHANGE_CHOOSEN, REMOVE_TICKET } from '../type/TypeDispatchMovie'
+import { ADD_TICKETS, REMOVE_TICKET } from '../type/TypeDispatchMovie'
 
 
 const initState = {

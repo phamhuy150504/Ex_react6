@@ -17,7 +17,7 @@ class ListChair extends Component {
 
   render() {
     return (
-        <>
+        <>  
             {this.renderHangGhe()}
         </>
     )

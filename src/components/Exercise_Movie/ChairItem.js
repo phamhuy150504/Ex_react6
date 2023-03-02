@@ -6,6 +6,7 @@ class ChairItem extends Component {
 
   renderButton = () => {
     const {location, chairItem, chairChosen } = this.props
+    let styleChairChoosing = ''
     let styleChairChosen = ''
     let disable = false
     
@@ -13,10 +14,9 @@ class ChairItem extends Component {
       styleChairChosen = 'gheDuocChon' 
       disable = true
     } 
-    console.log(disable);
+
     chairItem.daDat ? styleChairChosen = 'gheDuocChon' : styleChairChosen = ''
 
-    let styleChairChoosing = ''
     let index = chairChosen.findIndex(chairChosen => {
       return chairChosen.soGhe === chairItem.soGhe 
     }) 
@@ -33,8 +33,7 @@ class ChairItem extends Component {
       )
     } else {
       return (
-        <button onClick={() => this.props.handleAddTickets(chairItem)} className={`ghe ${styleChairChosen} ${styleChairChoosing}
-                   `} disabled={disable}>
+        <button onClick={() => this.props.handleAddTickets(chairItem)} className={`ghe ${styleChairChosen} ${styleChairChoosing}`} disabled={disable}>
           {chairItem.soGhe}
         </button>
       )
